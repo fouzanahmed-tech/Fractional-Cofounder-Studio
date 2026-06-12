@@ -8,8 +8,8 @@
   --bg3:       #141f1a;
   --border:    rgba(255,255,255,0.07);
   --border2:   rgba(255,255,255,0.13);
-  --text:      #e8f0ec;
-  --muted:     #6e8a7d;
+  --text:      #eef5f1;
+  --muted:     #adc4ba;
   --white:     #ffffff;
   --teal:      #00d4a8;
   --teal-dark: #00a882;
@@ -29,7 +29,7 @@
 
   /* Hero */
   --hero-text: #ffffff;
-  --hero-sub:  #7a9a8c;
+  --hero-sub:  #b8d0c8;
   --grid-line: rgba(255,255,255,0.025);
 
   /* Ticker */
@@ -42,7 +42,7 @@
   /* Inputs */
   --input-bg:  #0e1712;
   --input-text:#e8f0ec;
-  --input-ph:  #3d5549;
+  --input-ph:  #6a8c80;
 }
 
 /* ── Light theme ── */
@@ -53,7 +53,7 @@
   --border:    rgba(0,0,0,0.08);
   --border2:   rgba(0,0,0,0.14);
   --text:      #0d1a14;
-  --muted:     #5a7068;
+  --muted:     #344f47;
   --white:     #0d1a14;
   --teal:      #00966e;
   --teal-dark: #007557;
@@ -66,7 +66,7 @@
 
   --nav-bg:    rgba(244,247,245,0.92);
   --hero-text: #0d1a14;
-  --hero-sub:  #5a7068;
+  --hero-sub:  #2e4a42;
   --grid-line: rgba(0,0,0,0.04);
 
   --ticker-bg: #ffffff;
