@@ -15,11 +15,15 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
-      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-      style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src   'self' https://fonts.gstatic.com;
-      img-src    'self' data: https://www.google-analytics.com;
+      script-src  'self' https://www.googletagmanager.com https://www.google-analytics.com;
+      style-src   'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src    'self' https://fonts.gstatic.com;
+      img-src     'self' data: https://www.google-analytics.com;
       connect-src 'self' https://www.google-analytics.com;
+      object-src  'none';
+      base-uri    'self';
+      form-action 'self';
+      upgrade-insecure-requests;
       frame-ancestors 'none';
     " />
 
@@ -30,17 +34,12 @@
 
     <!-- Google Analytics — replace G-XXXXXXXXXX -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX", { anonymize_ip: true });
-    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body>
 
@@ -216,6 +215,5 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
   </body>
 </html>
