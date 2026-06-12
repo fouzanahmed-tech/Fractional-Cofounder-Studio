@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment — never commit secrets
+.env
+.env.*
+*.env
+
+# Claude Code internals
+.claude/
+
+# Build artefacts (if added later)
+dist/
+build/
+node_modules/
+
+# Local dev only
+fractional-cofounder-studio-code/
