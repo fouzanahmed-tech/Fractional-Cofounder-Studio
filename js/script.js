@@ -71,8 +71,7 @@ if (opts.length && resultText) {
 }
 
 // ── Form submission (Formspree) ──
-// Replace YOUR_FORM_ID with the ID from your Formspree form (formspree.io)
-const FORMSPREE = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE = "https://formspree.io/f/xnjyglql";
 
 const form = document.getElementById("intake-form");
 const submitBtn = document.getElementById("form-submit");
