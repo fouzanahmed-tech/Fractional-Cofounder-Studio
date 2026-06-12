@@ -89,13 +89,19 @@ if (form) {
         body: new FormData(form),
         headers: { Accept: "application/json" }
       });
-      if (!res.ok) throw new Error();
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const reason = data?.errors?.[0]?.message || data?.error || `HTTP ${res.status}`;
+        console.error("Formspree error:", reason, data);
+        throw new Error(reason);
+      }
       form.reset();
       submitBtn.textContent = "Sent ✓";
       status.className = "form-note success";
       status.textContent = "Got it — we'll review your bottleneck and be in touch within 1–2 business days.";
       if (typeof gtag !== "undefined") gtag("event", "form_submit", { event_category: "intake" });
-    } catch {
+    } catch (err) {
+      console.error("Form submission failed:", err.message);
       submitBtn.disabled = false;
       submitBtn.textContent = "Send my bottleneck for review";
       status.className = "form-note error";
