@@ -44,7 +44,7 @@ Push to `main` — GitHub Actions automatically deploys to GitHub Pages.
 1. **Google Analytics** — replace `G-XXXXXXXXXX` in `index.html`, `about.html`
 2. **Formspree** — replace `YOUR_FORM_ID` in `js/script.js`
 3. **GitHub Pages** — enable in repo Settings → Pages → Source: GitHub Actions
-4. **Custom domain DNS** — point GoDaddy to GitHub Pages (see DEPLOY.md)
+4. **Custom domain DNS** — point GoDaddy to GitHub Pages
 
 ## Security
 
