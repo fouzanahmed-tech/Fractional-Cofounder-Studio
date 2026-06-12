@@ -36,11 +36,17 @@ if (burger && drawer) {
 }
 
 // ── Scroll reveal ──
-const revealEls = document.querySelectorAll(".reveal");
+const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
 if (revealEls.length) {
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); } });
-  }, { threshold: 0.1, rootMargin: "0px 0px -36px 0px" });
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const delay = parseInt(e.target.dataset.delay || "0", 10);
+        setTimeout(() => e.target.classList.add("visible"), delay);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
   revealEls.forEach(el => obs.observe(el));
 }
 
